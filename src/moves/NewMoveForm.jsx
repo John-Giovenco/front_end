@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { useNavigation } from "react-router";
+import { useNavigate } from "react-router";
 
 function NewMoveForm() {
-  const navigation = useNavigation();
+  const navigate = useNavigate();
 
   const [move, setMove] = useState({
     name: "",
@@ -23,7 +23,7 @@ function NewMoveForm() {
       body: JSON.stringify(move),
     });
 
-    navigation.push("/moves");
+    navigate.push("/moves");
   }
 
   return (
